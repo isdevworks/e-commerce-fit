@@ -1,0 +1,72 @@
+/* CSS: Tema Escuro Integrado - Checkout */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #0d0d0d; color: #f4f4f4; font-family: 'Roboto', sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
+
+:root {
+    --primary-color: #ff5722;
+    --primary-hover: #e64a19;
+    --card-bg: #1a1a1a;
+    --input-bg: #222;
+    --border-color: #333;
+    --text-muted: #888;
+}
+
+/* Cabeçalho */
+header { background-color: #000; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary-color); }
+header h1 { font-family: 'Oswald', sans-serif; font-size: 28px; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
+header h1 span { color: var(--primary-color); }
+
+.back-btn { color: var(--primary-color); text-decoration: none; font-weight: bold; font-family: 'Oswald', sans-serif; font-size: 16px; text-transform: uppercase; transition: color 0.3s; }
+.back-btn:hover { color: #fff; }
+
+/* Estrutura do Checkout */
+.container { display: flex; flex-wrap: wrap; gap: 30px; max-width: 1200px; margin: 40px auto; padding: 0 20px; width: 100%; flex: 1; }
+
+.checkout-form, .order-summary { background: var(--card-bg); padding: 30px; border-radius: 8px; border: 1px solid var(--border-color); }
+.checkout-form { flex: 2; min-width: 300px; }
+.order-summary { flex: 1; min-width: 300px; height: fit-content; position: sticky; top: 20px; }
+
+h2 { font-family: 'Oswald', sans-serif; font-size: 24px; text-transform: uppercase; margin-bottom: 20px; color: #fff; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+
+/* Formulários Dark Mode */
+.form-group { margin-bottom: 20px; }
+.form-row { display: flex; gap: 15px; }
+.form-row .form-group { flex: 1; }
+
+label { display: block; margin-bottom: 8px; font-weight: bold; font-size: 14px; color: #ccc; }
+input[type="text"], input[type="email"], input[type="number"] { width: 100%; padding: 12px; background-color: var(--input-bg); border: 1px solid var(--border-color); color: #fff; border-radius: 4px; outline: none; transition: border 0.3s; font-family: 'Roboto', sans-serif; }
+input::placeholder { color: #555; }
+input:focus { border-color: var(--primary-color); }
+
+/* Resumo do Pedido */
+.summary-item { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 15px; padding-bottom: 15px; border-bottom: 1px dashed var(--border-color); color: #ccc; }
+.summary-total { display: flex; justify-content: space-between; margin-top: 20px; font-size: 22px; color: var(--primary-color); font-family: 'Oswald', sans-serif; font-weight: bold; }
+
+/* Botões */
+button { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; color: white; border: none; padding: 15px; border-radius: 4px; cursor: pointer; font-size: 18px; width: 100%; font-weight: bold; transition: all 0.3s; }
+button.btn-checkout { background-color: var(--primary-color); margin-top: 25px; }
+button.btn-checkout:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
+button.btn-clear { background-color: transparent; border: 1px solid #555; color: #888; padding: 10px; font-size: 14px; margin-top: 15px; }
+button.btn-clear:hover { border-color: #ff3333; color: #ff3333; }
+
+footer { background-color: #000; color: #555; text-align: center; padding: 20px; margin-top: auto; border-top: 1px solid var(--border-color); font-size: 14px; }
+
+/* Botão de remover item individual (o 'X') */
+button.btn-remove-item {
+    background: transparent;
+    color: #ff3333;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button.btn-remove-item:hover {
+    background: transparent;
+    transform: scale(1.2); /* Dá um pequeno zoom ao passar o mouse */
+}

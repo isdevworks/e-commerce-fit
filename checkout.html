@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vellox Nutrition | Finalizar Compra</title>
+    <link rel="stylesheet" href="checkout-style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Vellox<span>Nutrition</span></h1>
+        <a href="index.html" class="back-btn">← Voltar aos Suplementos</a>
+    </header>
+
+    <div class="container">
+        <div class="checkout-form">
+            <h2>1. Dados para Entrega</h2>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" required placeholder="Ex: João da Silva">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" required placeholder="00000-000">
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" required placeholder="Sua cidade">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group" style="flex: 3;">
+                        <label for="endereco">Endereço (Rua, Avenida)</label>
+                        <input type="text" id="endereco" required placeholder="Ex: Rua das Pedras">
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label for="numero">Número</label>
+                        <input type="text" id="numero" required>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px; padding: 15px; background-color: #222; border-left: 4px solid #25d366; border-radius: 4px;">
+                    <p style="color: #ccc; font-size: 14px;">ℹ️ O pagamento será combinado diretamente com um de nossos especialistas via WhatsApp (Aceitamos PIX, Cartão e Boleto).</p>
+                </div>
+            </form>
+        </div>
+
+        <div class="order-summary">
+            <h2>Seu Arsenal</h2>
+            
+            <div id="items-container"></div>
+
+            <div class="summary-total">
+                <span>Total</span>
+                <span id="total-price">R$ 0,00</span>
+            </div>
+
+            <button class="btn-checkout" onclick="processarCheckout()">Finalizar no WhatsApp 💬</button>
+            <button class="btn-clear" onclick="limparCarrinho()">Esvaziar Carrinho</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>🔒 Transação 100% Segura. Foco no treino, a entrega é por nossa conta.</p>
+    </footer>
+
+    <script src="checkout-script.js"></script>
+</body>
+</html>
