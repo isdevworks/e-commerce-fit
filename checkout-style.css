@@ -13,19 +13,19 @@ body { background-color: #0d0d0d; color: #f4f4f4; font-family: 'Roboto', sans-se
     --text-muted: #888;
 }
 
-/* Cabeçalho */
+
 header { background-color: #000; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary-color); }
-/* Ajuste de tamanho para o logotipo no cabeçalho */
+
 header .logo-site {
-    max-height: 50px; /* Ajuste a altura para ficar ideal no seu layout */
+    max-height: 50px; 
     width: auto;
-    cursor: pointer; /* Para parecer clicável e voltar pro início */
+    cursor: pointer; 
 }
 
 .back-btn { color: var(--primary-color); text-decoration: none; font-weight: bold; font-family: 'Oswald', sans-serif; font-size: 16px; text-transform: uppercase; transition: color 0.3s; }
 .back-btn:hover { color: #fff; }
 
-/* Estrutura do Checkout */
+
 .container { display: flex; flex-wrap: wrap; gap: 30px; max-width: 1200px; margin: 40px auto; padding: 0 20px; width: 100%; flex: 1; }
 
 .checkout-form, .order-summary { background: var(--card-bg); padding: 30px; border-radius: 8px; border: 1px solid var(--border-color); }
@@ -34,7 +34,7 @@ header .logo-site {
 
 h2 { font-family: 'Oswald', sans-serif; font-size: 24px; text-transform: uppercase; margin-bottom: 20px; color: #fff; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
 
-/* Formulários Dark Mode */
+
 .form-group { margin-bottom: 20px; }
 .form-row { display: flex; gap: 15px; }
 .form-row .form-group { flex: 1; }
@@ -44,11 +44,11 @@ input[type="text"], input[type="email"], input[type="number"] { width: 100%; pad
 input::placeholder { color: #555; }
 input:focus { border-color: var(--primary-color); }
 
-/* Resumo do Pedido */
+
 .summary-item { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 15px; padding-bottom: 15px; border-bottom: 1px dashed var(--border-color); color: #ccc; }
 .summary-total { display: flex; justify-content: space-between; margin-top: 20px; font-size: 22px; color: var(--primary-color); font-family: 'Oswald', sans-serif; font-weight: bold; }
 
-/* Botões */
+
 button { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; color: white; border: none; padding: 15px; border-radius: 4px; cursor: pointer; font-size: 18px; width: 100%; font-weight: bold; transition: all 0.3s; }
 button.btn-checkout { background-color: var(--primary-color); margin-top: 25px; }
 button.btn-checkout:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
@@ -57,7 +57,7 @@ button.btn-clear:hover { border-color: #ff3333; color: #ff3333; }
 
 footer { background-color: #000; color: #555; text-align: center; padding: 20px; margin-top: auto; border-top: 1px solid var(--border-color); font-size: 14px; }
 
-/* Botão de remover item individual (o 'X') */
+
 button.btn-remove-item {
     background: transparent;
     color: #ff3333;
@@ -72,5 +72,54 @@ button.btn-remove-item {
 
 button.btn-remove-item:hover {
     background: transparent;
-    transform: scale(1.2); /* Dá um pequeno zoom ao passar o mouse */
+    transform: scale(1.2); 
+}
+
+   /* RESPONSIVIDADE - MOBILE */
+   @media (max-width: 768px) {
+    
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+        text-align: center;
+    }
+    header .logo-site {
+        max-height: 35px;
+    }
+
+    
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+        margin: 20px auto;
+    }
+    .checkout-form, .order-summary {
+        width: 100%;
+        min-width: 100%;
+        padding: 20px 15px;
+    }
+
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    
+    .summary-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .summary-item > div {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    
+    button.btn-remove-item {
+        padding: 10px;
+        font-size: 18px;
+    }
 }
