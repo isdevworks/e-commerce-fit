@@ -83,7 +83,7 @@ function processarCheckout() {
     const mensagemCodificada = encodeURIComponent(mensagem);
 
     // SEU NÚMERO DE WHATSAPP AQUI
-    const numeroWhatsApp = "5571991597731"; 
+    const numeroWhatsApp = "5571984798589"; 
 
     // Esvazia o carrinho e redireciona
     limparCarrinho();

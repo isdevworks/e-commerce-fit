@@ -123,3 +123,10 @@ button.btn-remove-item:hover {
         font-size: 18px;
     }
 }
+
+/* Destaque da frase no rodapé */
+.slogan-rodape {
+    color: var(--primary-color);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
