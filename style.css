@@ -61,14 +61,16 @@ header .logo-site {
 .badge { position: absolute; top: 15px; right: -30px; background: var(--primary-color); color: white; padding: 5px 40px; transform: rotate(45deg); font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: 1px; }
 
 /* Imagem do Produto (Atualizada para fotos reais) */
+/* Imagem do Produto (Ajustado para Potes Reais) */
 .product-image { 
     width: 100%; 
     height: 220px; 
-    object-fit: cover; /* Isso garante que a foto preencha o espaço sem amassar */
+    object-fit: contain; /* Mostra o pote inteiro sem amassar e sem cortar */
     border-radius: 8px; 
     margin-bottom: 20px; 
-    border: 2px solid #222; /* Bordinha elegante ao redor da foto */
-    background-color: #111;
+    border: 2px solid #222; 
+    background-color: #ffffff; /* Fundo branco para misturar com a foto do produto */
+    padding: 10px; /* Dá um respiro pro pote não colar nas bordas */
 }
 .product-title { font-size: 20px; color: #fff; margin-bottom: 10px; font-weight: bold; }
 .product-desc { font-size: 14px; color: var(--text-muted); margin-bottom: 15px; }
