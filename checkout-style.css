@@ -15,8 +15,12 @@ body { background-color: #0d0d0d; color: #f4f4f4; font-family: 'Roboto', sans-se
 
 /* Cabeçalho */
 header { background-color: #000; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary-color); }
-header h1 { font-family: 'Oswald', sans-serif; font-size: 28px; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
-header h1 span { color: var(--primary-color); }
+/* Ajuste de tamanho para o logotipo no cabeçalho */
+header .logo-site {
+    max-height: 50px; /* Ajuste a altura para ficar ideal no seu layout */
+    width: auto;
+    cursor: pointer; /* Para parecer clicável e voltar pro início */
+}
 
 .back-btn { color: var(--primary-color); text-decoration: none; font-weight: bold; font-family: 'Oswald', sans-serif; font-size: 16px; text-transform: uppercase; transition: color 0.3s; }
 .back-btn:hover { color: #fff; }
